@@ -24,7 +24,10 @@ class Point
   def place(checker)
     raise "Point is full" if self.status == :full
     checkers << checker
+  end
 
+  def checker_colour
+    checkers[0].colour
   end
 
 end
