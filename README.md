@@ -5,6 +5,8 @@ Backgammon
 
 Backgammon is a game for two players. The playing pieces are moved according to the roll of dice, and a player wins by removing all of their pieces from the board before their opponent.
 
+http://www.bkgm.com/rules.html
+
 ![NAME_OF_IMAGE](http://ENTER_URL)
 
 ## Technologies Used
