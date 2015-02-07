@@ -1,0 +1,5 @@
+require './lib/bar'
+require './lib/checker'
+require './lib/dice'
+require './lib/player'
+require './lib/point'
