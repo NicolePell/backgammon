@@ -1,4 +1,5 @@
 require './lib/bar'
+require './lib/board'
 require './lib/checker'
 require './lib/dice'
 require './lib/player'
