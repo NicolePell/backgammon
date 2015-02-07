@@ -17,9 +17,24 @@ describe Point do
       expect(point.status).to be :occupied
     end
 
-    it 'it can hold the checker' do
+    it 'it can hold a checker' do
       point.place(red)
-      expect(point.checkers.length).to eq 1
+      expect(point.checkers.count).to eq 1
+    end
+
+    it 'the point should know how many checkers it holds' do
+      3.times { point.place(red) }
+      expect(point.checker_count).to eq 3
+    end
+
+    it "the status should be full when occupied by 5 checkers" do
+      5.times { point.place(red) }
+      expect(point.status).to be :full
+    end
+
+    it "it can't hold more than 5 checkers" do
+      5.times { point.place(red) }
+      expect(lambda {point.place(red)}).to raise_error(RuntimeError, 'Point is full')
     end
   end
 

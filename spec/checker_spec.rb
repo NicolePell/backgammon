@@ -15,6 +15,6 @@ describe Checker do
     end
   end
 
-  
+
 
 end
