@@ -44,6 +44,12 @@ describe Point do
       point.place(red)
       expect(point.checker_colour).to eq :red
     end
+
+    it 'should not let an opponent colour land on it' do
+      2.times { point.place(red) }
+      p point.checker_colour
+      expect(lambda {point.place(black)}).to raise_error(RuntimeError, 'Occupied')
+    end
   end
 
 end
