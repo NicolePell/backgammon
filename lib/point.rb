@@ -5,4 +5,9 @@ class Point
   def initialize(status=:empty)
     @status = status
   end
+
+  def place(checker)
+    @status = :occupied
+  end
+
 end
