@@ -51,17 +51,17 @@ describe Point do
       expect(point.checker_colour).to eq :red
     end
 
-    it 'should not let an opponent colour land on it' do
+    it 'the opponent checker cannot land on it' do
       2.times { point.place(red) }
       expect(lambda {point.place(black)}).to raise_error(RuntimeError, 'Occupied')
     end
 
-    it 'should kick the opponent colour off the point when only one checker' do
+    it 'it will kick the opponent checker off if there is only one checker' do
       point.place(black)
       expect(point.checker_colour).to eq :black
     end
 
-    it 'should let an opponent colour land if there is only one checker' do
+    it 'the opponent checker will occupy the point if there is only one checker' do
       point.place(black)
       expect(point.checkers[0].colour).to eq :black
     end

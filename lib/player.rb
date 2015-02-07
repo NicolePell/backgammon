@@ -4,13 +4,9 @@ class Player
 
   attr_reader :name, :checkers
 
-  def initialize(name)
+  def initialize(name, colour)
     @name = name
-    @checkers = []
-  end
-
-  def start_checkers(checker)
-    15.times { @checkers << checker }
+    @checkers = Array.new(15, Checker.new(colour))
   end
 
 end

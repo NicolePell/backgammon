@@ -5,7 +5,6 @@ describe Bar do
   let(:bar) { Bar.new }
   let(:black) { double :checker, colour: :black }
 
-  context 'when initialized' do
     it 'can hold checkers' do
       bar.receive(black)
       expect(bar.checkers.count).to eq 1
@@ -17,6 +16,5 @@ describe Bar do
       bar.release(black)
       expect(bar.checkers.count).to eq 0
     end
-  end
 
 end
