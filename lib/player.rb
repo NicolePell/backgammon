@@ -6,7 +6,12 @@ class Player
 
   def initialize(name, colour)
     @name = name
-    @checkers = Array.new(15, Checker.new(colour))
+    @checkers = []
+  end
+
+  def starting_checkers(checker, colour)
+    15.times { checkers << Checker.new(colour) }
+    checkers
   end
 
 end
