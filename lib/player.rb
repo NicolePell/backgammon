@@ -1,17 +1,15 @@
-require_relative 'checker'
-
 class Player
 
-  attr_reader :name, :checkers
+  attr_reader :name, :checkers, :content
 
-  def initialize(name, colour)
+  def initialize(name)
     @name = name
     @checkers = []
+    @content = content
   end
 
-  def starting_checkers(checker, colour)
-    15.times { checkers << Checker.new(colour) }
-    checkers
+  def add_checker(content)
+    checkers << content
   end
 
 end

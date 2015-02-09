@@ -6,9 +6,9 @@ describe Board do
   let(:point) { double :point }
 
   context 'when starting game' do
-    it 'has 24 points' do
-      board.fill_points(point)
-      expect(board.points.count).to eq 24
+    it 'can add point' do
+      board.add_point
+      expect(board.points.count).to eq 1
     end
   end
 

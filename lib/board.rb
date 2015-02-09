@@ -1,15 +1,13 @@
-require_relative 'point'
-
 class Board
 
-  attr_reader :points
+  attr_reader :points, :point
 
   def initialize
     @points = []
+    @point = point
   end
 
-  def fill_points(point)
-    24.times { points << Point.new }
-    points
+  def add_point
+    points << point
   end
 end
