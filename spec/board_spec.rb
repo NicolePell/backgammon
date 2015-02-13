@@ -7,7 +7,7 @@ describe Board do
 
   context 'when starting game' do
     it 'can add point' do
-      board.add_point
+      board.add_point(point)
       expect(board.points.count).to eq 1
     end
   end

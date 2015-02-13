@@ -7,7 +7,7 @@ class Board
     @point = point
   end
 
-  def add_point
+  def add_point(point)
     points << point
   end
 end
