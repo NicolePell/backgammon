@@ -1,0 +1,13 @@
+<h1>Ready to play?</h1>
+
+<table>
+  <% @points.each do |point| %>
+    <td>
+    <% if point.status == :empty %>
+      <%= 'empty' %>
+    <% else %>
+      <%= point.checkers[0].colour %>
+    <% end %>
+  </td>
+  <% end %>
+</table>
